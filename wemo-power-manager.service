@@ -1,0 +1,13 @@
+[Unit]
+Description=Wemo Power Manager
+
+[Service]
+Type=simple
+PIDFile=/run/wemo-power-manager.pid
+ExecStart=/usr/bin/python3 /DESTINATION_DIR/wemo-power-manager-service.py
+WorkingDirectory=//DESTINATION_DIR/
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
